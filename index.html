@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css"
+    />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+    <div class="uk-container">
+      <div class="uk-card uk-card-default uk-padding-large uk-margin-top">
+        <form class="uk-form loan">
+          <fieldset class="uk-fieldset">
+            <legend class="uk-legend uk-text-center uk-text-bold">
+              Loan Calculator
+            </legend>
+            <div class="uk-margin"></div>
+            <div class="uk-inline uk-width-1-1">
+              <span class="uk-form-icon" id="iconista" uk-icon="icon: database"></span>
+              <input type="number" class="uk-input" id="loan__amount" placeholder="Loan Amount" />
+            </div>
+            <div class="uk-margin"></div>
+            <div class="uk-inline uk-width-1-1">
+              <span class="uk-form-icon">%</span>
+              <input
+                type="number"
+                class="uk-input"
+                placeholder="Annual Interest"
+                id="loan__annual"
+              />
+            </div>
+            <div class="uk-margin"></div>
+            <div class="uk-inline uk-width-1-1">
+              <span class="uk-form-icon" uk-icon="icon: future"></span>
+              <input
+                type="number"
+                class="uk-input"
+                placeholder="Repayment Years"
+                id="loan__repayment"
+              />
+            </div>
+            <div class="uk-margin"></div>
+            <input
+              type="submit"
+              value="Calculate"
+              class="uk-button uk-button-default uk-width-1-1"
+            />
+          </fieldset>
+      </div>
+
+<!-- LOADER -->
+
+      <div class="uk-text-center" id="loader">
+          <img src="./loader/loader.gif" alt="" srcset="">
+      </div>
+
+      <!-- RESULTS -->
+
+      <div id="results">
+        <div class="uk-margin"></div>
+
+        <h2 class="uk-text-bold uk-text-center">Results</h2>
+
+        <form class="uk-form">
+            <fieldset class="uk-fieldset">
+                <label for="monthly" class="uk-form-label">Monthly Payment</label>
+                <div class="uk-margin-small"></div>
+                <input type="text" disabled class="uk-input" id="results__monthly" placeholder="I don't know..">
+                <div class="uk-margin">
+                  <label for="monthly" class="uk-form-label">Total Payment</label>
+                  <div class="uk-margin-small"></div>
+                  <input type="text" disabled class="uk-input" placeholder="I don't know.."  id="results__total">
+                </div>
+                <div class="uk-margin">
+                  <label for="monthly" class="uk-form-label">Total Interest</label>
+                  <div class="uk-margin-small"></div>
+                  <input type="text" disabled class="uk-input" placeholder="I don't know.." id="results__interest">
+                </div>
+            </fieldset>
+        </form>
+
+      </form>
+      </div>
+
+    </div>
+  </body>
+  <script src="App.js"></script>
+</html>
